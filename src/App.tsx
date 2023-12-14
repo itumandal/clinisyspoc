@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { Routes,Route } from "react-router-dom";
+import HomeScreen from './pages/HomeScreen';
+import SPMUI from './pages/SPMUI';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+      {/* <Route path='/login' Component={<></>}/> */}
+      <Route path='/' Component={HomeScreen} />
+      <Route path='/homescreen/spmui' Component={SPMUI} />
+      {/* <Route path='/homescreen/configpage' Component={<div>Hello World</div>} /> */}
+
+      
+      </Routes>
     </div>
   );
 }
